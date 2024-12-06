@@ -8,12 +8,15 @@ public class Calculator {
     public int multiply(int a, int b) {
         return a * b;
     }
-    public int divide(int a, int b) {
+    public double divide(int a, int b) {
         if (b == 0) {
             System.out.println("Error: Division by zero.");
             return 0;
         }
-        return a / b;
+        return (double) a / b;
+    }
+    public double sqrt(double a) {
+        return Math.sqrt(a);
     }
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
@@ -21,5 +24,6 @@ public class Calculator {
         System.out.println("Subtraction: " + calculator.subtract(10, 5));
         System.out.println("Multiplication: " + calculator.multiply(10, 5));
         System.out.println("Division: " + calculator.divide(10, 2));
+        System.out.println("Square: " + calculator.sqrt(9));
     }
 }
